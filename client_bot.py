@@ -12,7 +12,7 @@ api_id = int(os.environ["API_ID"])
 api_hash = os.environ.get("API_HASH", "")
 
 # @BotFather (the script work also for a user account, change the code)
-bot_token = '123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZAABBCCDDEEFFG'
+bot_token = os.environ.get("BOT_TOKEN", "")
 
 file_size = int(os.environ.get("FILE_SIZE", 200000000))  # In Bytes
 
