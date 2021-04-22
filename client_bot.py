@@ -8,13 +8,13 @@ import validators
 from telethon import TelegramClient, events
 
 # https://my.telegram.org/
-api_id = XXXXXX
-api_hash = 'XXXXXXXXXXXXXXXXXXXXXXXXXXX'
+api_id = int(os.environ["API_ID"])
+api_hash = os.environ.get("API_HASH", "")
 
 # @BotFather (the script work also for a user account, change the code)
 bot_token = '123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZAABBCCDDEEFFG'
 
-file_size = 200000000  # In Bytes
+file_size = int(os.environ.get("FILE_SIZE", 200000000))  # In Bytes
 
 with TelegramClient('fichierrapide', api_id, api_hash).start(bot_token=bot_token) as client:
     print("Démarrage terminé")
